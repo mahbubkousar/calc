@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <link rel="stylesheet" href="../_theme-styles/normalize.css">
+  
+  <!-- PROJECT THEME CSS -->
+  <link rel="stylesheet" href="../_theme-styles/theme.css">
+  
+  <!-- FINAL PROJECT CSS (use for reference) -->
+  <link rel="stylesheet" href="final.css">
+  
+  <!-- SANDBOX CSS (this is your file!) -->
+  <link rel="stylesheet" href="sandbox.css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Nova+Mono|Roboto+Condensed" rel="stylesheet">
+  <style type="text/css">
+  .final__animation-bar-1 {
+  position: relative;
+  display: block;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  .final__animation-bar-1 span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+  background-color: #f56982;
+  background-size: 100%;
+  background-image: linear-gradient(to bottom, #f2395a, #b90c2b);
+  animation: progress-anim-1 10s infinite linear;
+  }
+  .final__animation-bar-1 span:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-size: 100%;
+  background-image: linear-gradient(45deg, #ffffff 25%,
+  rgba(0, 0, 0, 0) 25%,
+  rgba(0, 0, 0, 0) 50%,
+  #ffffff 50%,
+  #ffffff 75%,
+  rgba(0, 0, 0, 0) 75%,
+  rgba(0, 0, 0, 0));
+  background-size: 30px 30px;
+  opacity: 0.3;
+  animation: progress-anim-1-after 0.5s infinite linear;
+  }
+  
+  
+  @-webkit-keyframes progress-anim-1 {
+  0% {
+  width: 20%;
+  }
+  50% {
+  width: 80%;
+  }
+  100% {
+  width: 20%;
+  }
+  }
+  @keyframes progress-anim-1 {
+  0% {
+  width: 20%;
+  }
+  50% {
+  width: 80%;
+  }
+  100% {
+  width: 20%;
+  }
+  }
+  @-webkit-keyframes progress-anim-1-after {
+  0% {
+  background-position: 0 100%;
+  }
+  100% {
+  background-position: 30px 100%;
+  }
+  }
+  @keyframes progress-anim-1-after {
+  0% {
+  background-position: 0 100%;
+  }
+  100% {
+  background-position: 30px 100%;
+  }
+  }
+  
+  #show {
+  background-color: LightPink;
+  }
+  
+  #your {
+  color: #e0dfdc;
+  background: #556677;
+  letter-spacing: .1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0,0,0,0.9);
+  color: #e0dfdc;
+  background: #556677;
+  }
+  /* =========================
+  PROGRESS BARS #2
+  ========================= */
+  .final__animation-bar-2 {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  .final__animation-bar-2 span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  background-color: #00e6e7;
+  background-size: 100%;
+  background-image: linear-gradient(to bottom, #00b3b4, #008081);
+  animation: progress-anim-2 10s infinite ease;
+  }
+  .final__animation-bar-2 span:before {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-top-color: rgba(0, 0, 0, 1);
+  content: "";
+  }
+  .final__animation-bar-2 span:after {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 5px);
+  z-index: 1;
+  display: inline-block;
+  content: attr(data-label);
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  background-color: rgba(0, 0, 0, 1);
+  color: #FFFFFF;
+  }
+  
+  
+  @-webkit-keyframes progress-anim-2 {
+  0% {
+  width: 20%;
+  }
+  50% {
+  width: 100%;
+  }
+  100% {
+  width: 20%;
+  }
+  }
+  @keyframes progress-anim-2 {
+  0% {
+  width: 20%;
+  }
+  50% {
+  width: 100%;
+  }
+  100% {
+  width: 20%;
+  }
+  }
+  </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>এ কী কাণ্ড!</title>
+    <style type="text/css">
+    #demotext {
+    color: #bc2e1e;
+    background: #edde9c;
+    text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd;
+    color: #bc2e1e;
+    background: #edde9c;
+    }
+    </style>
+  </head>
+  <body><center>
+  <h1 id="demotext">How much does your crush love you?</h1>
+  </center>
+    <div class="container-fluid">
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+    <img src="https://scontent.fdac28-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/55786319_2395369720682387_1485053503154946048_o.jpg?_nc_cat=107&efg=eyJpIjoiYiJ9&_nc_eui2=AeGpgCtQvMqBvEcSBblHTck1zN30bjvUcdggfzskiAY7ZmXYcRQaYYJ4A8-vtbJOkafbTH_dc0EwwGTqDr99c5SkHKJQueo-OfofuNqus0LGxQ&_nc_oc=AQl4kzuKSegk0tyVx-xz3ZFT_mXyhaCsHwQkSjtHZNSjqDDFp0Jec8ZurM2J6RbwrVE&_nc_ht=scontent.fdac28-1.fna&oh=8aab41be4d743e73d20e035b39852985&oe=5D036011 " class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+    <img src="https://scontent.fdac28-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/56229207_2395369910682368_833730899651592192_o.jpg?_nc_cat=101&efg=eyJpIjoiYiJ9&_nc_eui2=AeFMLtYd57-ssJvXEJ-V98O8eEr_KsOxCFefRIYuKDllSxLUzCRdtoaJEKB-Qyo-vvrq65mGaidrMgQrGdc0Ay_8wr4eNqwsCL9dn7hkBZsHnw&_nc_oc=AQmd-25E4J-KynlrhIno9KLtwj7uB8-BAVSsrgpFDDJDBMiBAFBp6FZr-YyhxjJRl9s&_nc_ht=scontent.fdac28-1.fna&oh=29efcd978b0772254be24f1c142f96df&oe=5D102DAC " class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+    <img src="https://scontent.fdac28-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/55869264_2395369464015746_8153057253159600128_o.jpg?_nc_cat=105&efg=eyJpIjoiYiJ9&_nc_eui2=AeHr8AZ0PAgk5nFWTLe5UMTgkm3RCTE0lY5An8YM5vPkcXgXhHuo3M9HwEPjf-Pzcvgm_K1Eyk2jepF-ZA3J79ZH_e1nVGTEDT9qe0NYkQjvFw&_nc_oc=AQnHgdfYIXMMKRsr0yeVn_3SI9c-yRhg7lOdHNuQJLKMP5FQFglm2WM_ZoS8qvAXBS0&_nc_ht=scontent.fdac28-1.fna&oh=ed992184fdca27b71cfc180813b35b2a&oe=5D441878 " class="d-block w-100" alt="...">
+    </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+    </a>
+    </div>
+    </div>
+    <hr>
+   <img src="https://scontent.fdac28-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/55849457_2395380950681264_2007164489459302400_o.jpg?_nc_cat=102&efg=eyJpIjoiYiJ9&_nc_eui2=AeEyLrDupItgQDcN9ewj2aTx9MW4aiul6yTK8rLHT39Lr5LMIc8qVGdRb07bD-2Nkp_JjUwUSnXdTRv-8ysOVNsoDARfCTR8HX6Ui00FumF7Jw&_nc_oc=AQlEyBOepqWE-Jk_wF-SSr44ZKKSPudK-si4H5QFaNs4t78ucc03TnB9eu9pUsZzNME&_nc_ht=scontent.fdac28-1.fna&oh=5863995e62a5d409b0f9fe5d92a72ed0&oe=5D3E3410 " width="100%">
+<br>
+<img src="https://scontent.fdac28-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/55920823_2395383360681023_1638573351054082048_o.jpg?_nc_cat=100&efg=eyJpIjoiYiJ9&_nc_eui2=AeG6INWlh9sI4oHLwQhkFTEfmHL99Hs2oLTEzG_sej0U0e8iHJjO85r51j_N0151oxfUo77o3uc-BUAxKtxSruKpeXgyQ5koUJohIZk0ZWY66g&_nc_oc=AQl8mOXA1PcAWrHXZ0C4ITLA7LslriC33k0KxZE5z5Geo1FjVQ1EL3lLyMVZClQoq04&_nc_ht=scontent.fdac28-1.fna&oh=68f8463f7f24825db57ac4244be54091&oe=5D3D59FF" width="100%">
+<img src="https://scontent.fdac28-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/55920823_2395383360681023_1638573351054082048_o.jpg?_nc_cat=100&efg=eyJpIjoiYiJ9&_nc_eui2=AeG6INWlh9sI4oHLwQhkFTEfmHL99Hs2oLTEzG_sej0U0e8iHJjO85r51j_N0151oxfUo77o3uc-BUAxKtxSruKpeXgyQ5koUJohIZk0ZWY66g&_nc_oc=AQl8mOXA1PcAWrHXZ0C4ITLA7LslriC33k0KxZE5z5Geo1FjVQ1EL3lLyMVZClQoq04&_nc_ht=scontent.fdac28-1.fna&oh=68f8463f7f24825db57ac4244be54091&oe=5D3D59FF" width="100%">
+<div id="hide">
+<style>
+
+ htmll, boddy {
+  width: 100%;  
+  height: 100%;
+  background: #FF7777;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  height: 100px;
+}
+
+h1 span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  animation: bounce .3s ease infinite alternate;
+  font-family: 'Titan One', cursive;
+  font-size: 80px;
+  color: #FFF;
+  text-shadow: 0 1px 0 #CCC,
+               0 2px 0 #CCC,
+               0 3px 0 #CCC,
+               0 4px 0 #CCC,
+               0 5px 0 #CCC,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px rgba(0, 0, 0, .4);
+}
+
+h1 span:nth-child(2) { animation-delay: .1s; }
+h1 span:nth-child(3) { animation-delay: .2s; }
+h1 span:nth-child(4) { animation-delay: .3s; }
+h1 span:nth-child(5) { animation-delay: .4s; }
+h1 span:nth-child(6) { animation-delay: .5s; }
+h1 span:nth-child(7) { animation-delay: .6s; }
+h1 span:nth-child(8) { animation-delay: .7s; }
+
+@keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 #CCC,
+                 0 7px 0 #CCC,
+                 0 8px 0 #CCC,
+                 0 9px 0 #CCC,
+                 0 50px 25px rgba(0, 0, 0, .2);
+  }
+}
+</style>
+<htmll>
+<boddy>
+<br>
+<br>
+<h1>
+  <span>R</span>
+  <span>E</span>
+  <span>S</span>
+  <span>U</span>
+  <span>L</span>
+  <span>T</span>
+  
+</h1>
+</boddy></htmll>
+</div>
+<div id="show">
+
+          <div class="animation-bar-1">
+            <span style="width:100%"></span>
+          </div>
+
+      
+<style>
+ #kkk {
+ color: #A7DD3C;
+
+ text-shadow: 2px 0 0px #800040, 3px 2px 0px rgba(77,0,38,0.5), 3px 0 3px #FF002B, 5px 0 3px #800015, 6px 2px 3px rgba(77,0,13,0.5), 6px 0 9px #FF5500, 8px 0 9px #802A00, 9px 2px 9px rgba(77,25,0,0.5), 9px 0 18px #FFD500, 11px 0 18px #806A00, 12px 2px 18px rgba(77,66,0,0.5), 12px 0 30px #D4FF00, 14px 0 30px #6A8000, 15px 2px 30px rgba(64,77,0,0.5), 15px 0 45px #80FF00, 17px 0 45px #408000, 17px 2px 45px rgba(38,77,0,0.5);
+ color: #A7DD3C;
+ 
+ }
+</style>
+          <div class="animation-bar-2">
+            <span data-label="Can't get actual ans"></span>
+          </div>
+
+   
+
+      
+        <div class="content">
+<center><br><br>
+          
+ <h2 id="kkk">Your Love</h2></center>
+            <div class="final__animation-bar-1">
+            
+              <span style="width:100%"></span>
+            </div>
+
+     <br><center><h2 id="crush"> Crush's love</h2></center>
+     <style type="text/css">
+     #crush {
+     color: #FFFFFF;
+    
+     text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+     color: #FFFFFF;
+    
+     }
+     </style>
+            <div class="final__animation-bar-2">
+              <span data-label="Loading"></span>
+            </div>
+</div><hr>
+<img src="https://scontent.fdac28-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/54369335_2395409334011759_3059204178720063488_o.jpg?_nc_cat=104&efg=eyJpIjoiYiJ9&_nc_eui2=AeHxTBZRp7IRi44lPnBRaLrGZNep0ofODGX41WHkumPvGcQbA2H0Rwk9avEhgXtw82rsIojQ2UrTmvFJY9yT_ikSDZmb5XsXMLz-WEtNJUol1w&_nc_oc=AQle8bR0T09_Fl1ZhpKe4nzeZ6N9XGtT8xb_M4sZcXK4wXsuivQ-eitJVySsNCK-Bbg&_nc_ht=scontent.fdac28-1.fna&oh=70200cda3d87fea217562837847c3b95&oe=5D0BD548" width="100%" height="900px">
+<br>
+<img src="https://scontent.fdac28-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/55776427_2395414894011203_347424745001582592_o.jpg?_nc_cat=111&efg=eyJpIjoiYiJ9&_nc_eui2=AeHEbqF0lr1sJKO4ORn3aK0qLPB3wW8qqVXckdEvYhd9Xz8UFnEqNuJZ6mNjVPEq60VJYMCuPYYEX2mq5lbucd8fvR-hmgka2gkdhLa28-luUA&_nc_oc=AQm2_EYUcMwa9GdHliU07LRinoZAiDpUVS1QQxxTS_021p8AJurRuX_jtHNK5_vwQc0&_nc_ht=scontent.fdac28-1.fna&oh=e2799b31e01d10f9495d5c30cdf473cd&oe=5D071B17 " width="100%">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
